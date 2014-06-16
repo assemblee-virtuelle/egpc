@@ -15,7 +15,7 @@
 					params = { "email" : $("#emailLogin").val() , 
 					    	   "pwd" : $("#pwdLogin").val(),
 					    	   "app" : "<?php echo $this::$moduleKey?>"};
-					testitpost("loginResult",'/ph/<?php echo $this::$moduleKey?>/api/login',params);
+					testitpost("loginResult", baseUrl+'/<?php echo $this::$moduleKey?>/api/login',params);
 					
 				}
 			</script>
@@ -51,7 +51,7 @@
 					    	   "type" : $("#typeSaveUser").val(),
 					    	   "phoneNumber" : $("#phoneNumberSaveUser").val(),
 					    	   "app":"<?php echo $this::$moduleKey?>" };
-					testitpost("createUserResult",'/ph/<?php echo $this::$moduleKey?>/api/saveUser',params);
+					testitpost("createUserResult", baseUrl+'/<?php echo $this::$moduleKey?>/api/saveUser',params);
 				}
 			</script>
 		</div>
@@ -68,10 +68,10 @@
 			<div id="getUserResult" class="result fss"></div>
 			<script>
 				function getUser() { 
-					testitget("getUserResult",'/ph/<?php echo $this::$moduleKey?>/api/getUser/email/'+$("#getUseremail").val());
+					testitget("getUserResult", baseUrl+'/<?php echo $this::$moduleKey?>/api/getUser/email/'+$("#getUseremail").val());
 				}
 				function confirmUserRegistration() { 
-					testitget("getUserResult",'/ph/<?php echo $this::$moduleKey?>/api/confirmgroupregistration/email/'+$("#getUseremail").val()+'/app/<?php echo $this::$moduleKey?>');
+					testitget("getUserResult", baseUrl+'/<?php echo $this::$moduleKey?>/api/confirmgroupregistration/email/'+$("#getUseremail").val()+'/app/<?php echo $this::$moduleKey?>');
 				}
 			</script>
 		</div>
@@ -91,7 +91,7 @@
 					params = {"app":"<?php echo $this::$moduleKey?>"};
 					if(fields) 
 						params.fields = fields.split(",");
-					testitpost("getpeoplebyResult",'/ph/<?php echo $this::$moduleKey?>/api/getpeopleby',params);
+					testitpost("getpeoplebyResult", baseUrl+'/<?php echo $this::$moduleKey?>/api/getpeopleby',params);
 				}
 			</script>
 		</div>

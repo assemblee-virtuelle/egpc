@@ -46,7 +46,7 @@
 					if( $("#whosaveGroup").val() )
 						params["group"] = $("#whosaveGroup").val();
 					
-					testitpost("saveGroupResult",'/ph/<?php echo $this::$moduleKey?>/api/saveGroup',params);
+					testitpost("saveGroupResult", baseUrl+'/<?php echo $this::$moduleKey?>/api/saveGroup',params);
 				}
 				function typeChanged(){
 					console.log( $("#typesaveGroup").val() );
@@ -78,10 +78,10 @@
 			<div id="getGroupResult" class="result fss"></div>
 			<script>
 				function getGroup(){
-					testitpost("getGroupResult",'/ph/<?php echo $this::$moduleKey?>/api/getgroupsby',{"email":$("#getGroupemail").val()});
+					testitpost("getGroupResult", baseUrl+'/<?php echo $this::$moduleKey?>/api/getgroupsby',{"email":$("#getGroupemail").val()});
 				}
 				function confirmGroupRegistration(){
-					testitget("getGroupResult",'/ph/<?php echo $this::$moduleKey?>/api/confirmGroupRegistration/email/'+$("#getGroupemail").val());
+					testitget("getGroupResult", baseUrl+'/<?php echo $this::$moduleKey?>/api/confirmGroupRegistration/email/'+$("#getGroupemail").val());
 				}
 			</script>
 		</div>
@@ -118,7 +118,7 @@
 			    	   "name" : $("#linkUser2GroupGroup").val(),
 			    	   "type":"<?php echo Group::TYPE_ASSOCIATION?>"
 			    	   };
-					testitpost("linkUser2GroupResult",'/ph/<?php echo $this::$moduleKey?>/api/linkUser2Group',params);
+					testitpost("linkUser2GroupResult", baseUrl+'/<?php echo $this::$moduleKey?>/api/linkUser2Group',params);
 				}
 				function unlinkUser2Group(){
 					params = { 
@@ -127,7 +127,7 @@
 			    	   "type":"<?php echo Group::TYPE_ASSOCIATION?>",
 			    	    "unlink" : true,
 			    	   };
-					testitpost("linkUser2GroupResult",'/ph/<?php echo $this::$moduleKey?>/api/unlinkUser2Group',params);
+					testitpost("linkUser2GroupResult", baseUrl+'/<?php echo $this::$moduleKey?>/api/unlinkUser2Group',params);
 				}
 			</script>
 		</div>
@@ -154,7 +154,7 @@
 						//params.tags = "social";
 						params.tags = {'$or':[{'tags':"social"},{'tags':"recherche"}]};
 					}
-					testitpost("getgroupsbyResult",'/ph/<?php echo $this::$moduleKey?>/api/getgroupsby',params);
+					testitpost("getgroupsbyResult", baseUrl+'/<?php echo $this::$moduleKey?>/api/getgroupsby',params);
 				}
 			</script>
 		</div>

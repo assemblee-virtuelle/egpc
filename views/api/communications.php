@@ -27,7 +27,7 @@
 			    	   "msg" : $("#sendMessagemsg").val(),
 			    	   "app":"<?php echo $this::$moduleKey?>"
 			    	   };
-					testitpost("sendMessageResult",'/ph/<?php echo $this::$moduleKey?>/api/sendMessage',params);
+					testitpost("sendMessageResult", baseUrl+'/<?php echo $this::$moduleKey?>/api/sendMessage',params);
 				}
 				function setPeople(){
 					$("#sendMessageemail").val("");
@@ -68,7 +68,7 @@
 					params = {"applications.<?php echo $this::$moduleKey?>.usertype":"event","limit":10};
 					if(fields) 
 						params.fields = fields.split(",");
-					testitpost("getmessagebyResult",'/ph/<?php echo $this::$moduleKey?>/api/getmessageby',params);
+					testitpost("getmessagebyResult", baseUrl+'/<?php echo $this::$moduleKey?>/api/getmessageby',params);
 				}
 			</script>
 		</div>
