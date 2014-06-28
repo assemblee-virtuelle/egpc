@@ -69,15 +69,15 @@ button + label{
 }
 .mixcontainer .mix a.titleMix{
   color:white;
-  border-color: transparent;
-  background-color: transparent;
+  border-color: blue;
+  background-color: blue;
   word-wrap:break-word;
   font-weight: bold;
   }
 .mixcontainer .mix span.info{
   color:white;
   font-size: xx-small;
-  background-color: transparent;
+  background-color: blue;
   border: none;
   margin:0px;
   display: inline;
@@ -88,11 +88,11 @@ button + label{
   margin:3px;
 }
 .mixcontainer .mix a:hover{
-    background-color: transparent;
+    background-color: blue;
     color: #3399FF;
 }
 .mixcontainer .mix a.active,.mixcontainer .mix span.active{
-    background-color: transparent;
+    background-color: blue;
     color: #3399FF;
 }
 

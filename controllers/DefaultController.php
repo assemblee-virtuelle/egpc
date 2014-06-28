@@ -21,7 +21,7 @@ class DefaultController extends Controller {
       array('label' => "Quoi", "key"=>"what","href"=>"javascript:;","onclick"=>"hideShow('.what')"),
       array('label' => "Mixitup", "key"=>"how","href"=>"egpc?tpl=mixitup"),
     );
-    
+
     protected function beforeAction($action)
   	{
   		Yii::app()->theme  = "oneScreenApp";
@@ -29,7 +29,7 @@ class DefaultController extends Controller {
   	}
 
     /**
-     * List all the latest observations
+     * 
      * @return [json Map] list
      */
 	public function actionIndex() 
@@ -75,7 +75,4 @@ class DefaultController extends Controller {
                                       "msgs"=>$msgs,
                                       "events"=>$events ) );
 	}
-
-  
-  
 }

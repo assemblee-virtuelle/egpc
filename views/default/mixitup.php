@@ -1,7 +1,7 @@
 <?php 
 $cs = Yii::app()->getClientScript();
-$cs->registerCssFile(Yii::app()->request->baseUrl. '/protected/modules/egpc/css/mixitup/reset.css');
-$cs->registerCssFile(Yii::app()->request->baseUrl. '/protected/modules/egpc/css/mixitup/style.css');
+$cs->registerCssFile($this->module->assetsUrl. '/css/mixitup/reset.css');
+$cs->registerCssFile($this->module->assetsUrl. '/css/mixitup/style.css');
 //$cs->registerScriptFile(Yii::app()->request->baseUrl.'/js/api.js' , CClientScript::POS_END);
 $this->pageTitle=$this::moduleTitle;
 ?>

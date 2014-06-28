@@ -495,9 +495,10 @@ function filterByTag(tag)
   
 }
 
-function hideShow(ids,parent=".step")
+function hideShow(ids)
 {
-  $(parent).slideUp();
+  log(ids);
+  $(".step").slideUp();
   $(ids).slideDown();
 }
 
